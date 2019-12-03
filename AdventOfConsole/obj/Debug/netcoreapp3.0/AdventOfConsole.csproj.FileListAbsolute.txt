@@ -1,0 +1,17 @@
+C:\Users\Andreas\source\repos\AdventOfConsole\AdventOfConsole\bin\Debug\netcoreapp3.0\AdventOfConsole.exe
+C:\Users\Andreas\source\repos\AdventOfConsole\AdventOfConsole\bin\Debug\netcoreapp3.0\AdventOfConsole.deps.json
+C:\Users\Andreas\source\repos\AdventOfConsole\AdventOfConsole\bin\Debug\netcoreapp3.0\AdventOfConsole.runtimeconfig.json
+C:\Users\Andreas\source\repos\AdventOfConsole\AdventOfConsole\bin\Debug\netcoreapp3.0\AdventOfConsole.runtimeconfig.dev.json
+C:\Users\Andreas\source\repos\AdventOfConsole\AdventOfConsole\bin\Debug\netcoreapp3.0\AdventOfConsole.dll
+C:\Users\Andreas\source\repos\AdventOfConsole\AdventOfConsole\bin\Debug\netcoreapp3.0\AdventOfConsole.pdb
+C:\Users\Andreas\source\repos\AdventOfConsole\AdventOfConsole\obj\Debug\netcoreapp3.0\AdventOfConsole.csprojAssemblyReference.cache
+C:\Users\Andreas\source\repos\AdventOfConsole\AdventOfConsole\obj\Debug\netcoreapp3.0\MainWindow.g.cs
+C:\Users\Andreas\source\repos\AdventOfConsole\AdventOfConsole\obj\Debug\netcoreapp3.0\App.g.cs
+C:\Users\Andreas\source\repos\AdventOfConsole\AdventOfConsole\obj\Debug\netcoreapp3.0\AdventOfConsole_MarkupCompile.cache
+C:\Users\Andreas\source\repos\AdventOfConsole\AdventOfConsole\obj\Debug\netcoreapp3.0\AdventOfConsole_MarkupCompile.lref
+C:\Users\Andreas\source\repos\AdventOfConsole\AdventOfConsole\obj\Debug\netcoreapp3.0\MainWindow.baml
+C:\Users\Andreas\source\repos\AdventOfConsole\AdventOfConsole\obj\Debug\netcoreapp3.0\AdventOfConsole.g.resources
+C:\Users\Andreas\source\repos\AdventOfConsole\AdventOfConsole\obj\Debug\netcoreapp3.0\AdventOfConsole.AssemblyInfoInputs.cache
+C:\Users\Andreas\source\repos\AdventOfConsole\AdventOfConsole\obj\Debug\netcoreapp3.0\AdventOfConsole.AssemblyInfo.cs
+C:\Users\Andreas\source\repos\AdventOfConsole\AdventOfConsole\obj\Debug\netcoreapp3.0\AdventOfConsole.dll
+C:\Users\Andreas\source\repos\AdventOfConsole\AdventOfConsole\obj\Debug\netcoreapp3.0\AdventOfConsole.pdb
