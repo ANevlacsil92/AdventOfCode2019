@@ -37,8 +37,8 @@ namespace AdventOfConsole
 
         private void btnStart_Click(object sender, RoutedEventArgs e)
         {
-            DayX.christmassySolvePuzzleOne();
-            DayX.christmassySolvePuzzleTwo();
+            Day3.christmassySolvePuzzleOne();
+            Day3.christmassySolvePuzzleTwo();
         }
     }
 }
