@@ -1,24 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\AdventOfCode\\AdventOfCode2019\\AdventOfConsole\\AdventOfConsole.csproj": {}
+    "C:\\Users\\Andreas\\source\\repos\\AdventOfConsole\\AdventOfConsole\\AdventOfConsole.csproj": {}
   },
   "projects": {
-    "C:\\AdventOfCode\\AdventOfCode2019\\AdventOfConsole\\AdventOfConsole.csproj": {
+    "C:\\Users\\Andreas\\source\\repos\\AdventOfConsole\\AdventOfConsole\\AdventOfConsole.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\AdventOfCode\\AdventOfCode2019\\AdventOfConsole\\AdventOfConsole.csproj",
+        "projectUniqueName": "C:\\Users\\Andreas\\source\\repos\\AdventOfConsole\\AdventOfConsole\\AdventOfConsole.csproj",
         "projectName": "AdventOfConsole",
-        "projectPath": "C:\\AdventOfCode\\AdventOfCode2019\\AdventOfConsole\\AdventOfConsole.csproj",
-        "packagesPath": "C:\\Users\\nevlacsila\\.nuget\\packages\\",
-        "outputPath": "C:\\AdventOfCode\\AdventOfCode2019\\AdventOfConsole\\obj\\",
+        "projectPath": "C:\\Users\\Andreas\\source\\repos\\AdventOfConsole\\AdventOfConsole\\AdventOfConsole.csproj",
+        "packagesPath": "C:\\Users\\Andreas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Andreas\\source\\repos\\AdventOfConsole\\AdventOfConsole\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\nevlacsila\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Andreas\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
