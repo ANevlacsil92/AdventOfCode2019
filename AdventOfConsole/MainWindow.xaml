@@ -10,24 +10,34 @@
         >
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="10*"/>
             <RowDefinition Height="2*"/>
-            <RowDefinition Height="6*"/>
-            <RowDefinition Height="1*"/>
+            <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="2*"/>
             <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="2*"/>
             <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="2*"/>
         </Grid.ColumnDefinitions>
         <TextBlock Grid.Row="0" Grid.ColumnSpan="5" HorizontalAlignment="Center" Text="★ Advent Of Console ★" VerticalAlignment="Center" FontSize="50" Margin="10" />
-        <TextBox x:FieldModifier="public" x:Name="tbInput" Grid.Row="1" Grid.ColumnSpan="4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" TextWrapping="Wrap" AcceptsReturn="True" Margin="10" Background="#8FB14E" Foreground="#F9F355"/>
-        <TextBox x:FieldModifier="public" x:Name="tbLog" Grid.Row="1" Grid.Column="4" Grid.ColumnSpan="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" TextWrapping="Wrap" AcceptsReturn="True" Margin="10" Background="#8FB14E" Foreground="#F9F355"/>
-        <Button x:Name="btnStart" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10" Content="★★★→" Click="btnStart_Click" Background="#8FB14E" Foreground="#F9F355" />
-        <TextBlock Grid.Row="2" Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10" Text="★"/>
-        <TextBox x:FieldModifier="public" x:Name="tbAnswerOne" Grid.Row="2" Grid.Column="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" VerticalContentAlignment="Center" Margin="10" IsReadOnly="True" Background="#8FB14E" Foreground="#F9F355" />
-        <TextBlock Grid.Row="2" Grid.Column="3" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10" Text="★★"/>
-        <TextBox x:FieldModifier="public" x:Name="tbAnswerTwo" Grid.Row="2" Grid.Column="4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" VerticalContentAlignment="Center" Margin="10" IsReadOnly="True" Background="#8FB14E" Foreground="#F9F355" />
+        
+        <TextBox x:FieldModifier="public" x:Name="tbInput" Grid.Row="1" Grid.ColumnSpan="6" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" TextWrapping="Wrap" AcceptsReturn="True" Margin="10" Background="#8FB14E" Foreground="#F9F355"/>
+        <TextBox x:FieldModifier="public" x:Name="tbLog" Grid.Row="1" Grid.Column="6" Grid.ColumnSpan="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" TextWrapping="Wrap" AcceptsReturn="True" Margin="10" Background="#8FB14E" Foreground="#F9F355"/>
+        
+        <Button x:Name="btnStart" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10" Content="★★★→" Click="btnStart_Click" Background="#8FB14E" Foreground="#F9F355" />
+        <TextBlock Grid.Row="2" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10" Text="★"/>
+        <TextBox x:FieldModifier="public" x:Name="tbAnswerOne" Grid.Row="2" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" VerticalContentAlignment="Center" Margin="10" IsReadOnly="True" Background="#8FB14E" Foreground="#F9F355" />
+        <TextBlock Grid.Row="2" Grid.Column="4" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10" Text="★★"/>
+        <TextBox x:FieldModifier="public" x:Name="tbAnswerTwo" Grid.Row="2" Grid.Column="5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" VerticalContentAlignment="Center" Margin="10" IsReadOnly="True" Background="#8FB14E" Foreground="#F9F355" />
+        <TextBlock Grid.Row="3" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10" Text="Total ⏱" FontSize="20"/>
+        <TextBox x:FieldModifier="public" x:Name="tbAnswerElapsedTotal" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" VerticalContentAlignment="Center" Margin="10" IsReadOnly="True" Background="#8FB14E" Foreground="#F9F355" />
+        <TextBlock Grid.Row="3" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10" Text="⏱" FontSize="20"/>
+        <TextBox x:FieldModifier="public" x:Name="tbAnswerElapsedOne" Grid.Row="3" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" VerticalContentAlignment="Center" Margin="10" IsReadOnly="True" Background="#8FB14E" Foreground="#F9F355" />
+        <TextBlock Grid.Row="3" Grid.Column="4" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10" Text="⏱" FontSize="20"/>
+        <TextBox x:FieldModifier="public" x:Name="tbAnswerElapsedTwo" Grid.Row="3" Grid.Column="5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" VerticalContentAlignment="Center" Margin="10" IsReadOnly="True" Background="#8FB14E" Foreground="#F9F355" />
     </Grid>
 </Window>

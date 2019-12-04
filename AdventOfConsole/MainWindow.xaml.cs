@@ -1,6 +1,7 @@
 ﻿using AdventOfConsole.Days;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -37,8 +38,18 @@ namespace AdventOfConsole
 
         private void btnStart_Click(object sender, RoutedEventArgs e)
         {
+            Stopwatch sw = Stopwatch.StartNew();
+            TimeSpan offset;
+                                     
             Day3.christmassySolvePuzzleOne();
+            offset = sw.Elapsed;
+
             Day3.christmassySolvePuzzleTwo();
+            sw.Stop();
+
+            tbAnswerElapsedOne.Text = offset.ToString(@"mm\:ss\:fff");
+            tbAnswerElapsedTwo.Text = (sw.Elapsed - offset).ToString(@"mm\:ss\:fff");
+            tbAnswerElapsedTotal.Text = sw.Elapsed.ToString(@"mm\:ss\:fff");
         }
     }
 }

@@ -10,6 +10,7 @@ namespace AdventOfConsole.Days
         static List<List<String>> positions;
         static List<String> intersections;
         static List<int> results;
+
         internal static void christmassySolvePuzzleOne()
         {
             positions = new List<List<string>>();
@@ -74,54 +75,12 @@ namespace AdventOfConsole.Days
         internal static void christmassySolvePuzzleTwo()
         {
             results.Clear();
-            int counter = 0;
+
             foreach (string inters in intersections)
             {
-                int steps = 0;
-                foreach (string path in MainWindow.input.Text.Split("\r\n"))
-                {
-                    int currentX = 0;
-                    int currentY = 0;
-                    foreach (string s in path.Split(","))
-                    {
-                        switch (s.Substring(0, 1))
-                        {
-                            case "R":
-                                for (counter = 0; counter < int.Parse(s.Substring(1)); counter++)
-                                {
-                                    currentX++;
-                                    if (currentX + ":" + currentY == inters) break;
-                                }
-                                break;
-                            case "D":
-                                for (counter = 0; counter < int.Parse(s.Substring(1)); counter++)
-                                {
-                                    currentY++;
-                                    if (currentX + ":" + currentY == inters) break;
-                                }
-                                break;
-                            case "U":
-                                for (counter = 0; counter < int.Parse(s.Substring(1)); counter++)
-                                {
-                                    currentY--;
-                                    if (currentX + ":" + currentY == inters) break;
-                                }
-                                break;
-                            case "L":
-                                for (counter = 0; counter < int.Parse(s.Substring(1)); counter++)
-                                {
-                                    currentX--;
-                                    if (currentX + ":" + currentY == inters) break;
-                                }
-                                break;
-                        }
-                        steps += counter;
-                        if (currentX + ":" + currentY == inters) break;
-                    }
-                }
-                results.Add(steps);
+                results.Add(positions[0].IndexOf(inters) + positions[1].IndexOf(inters) + 2);
             }
-
+            
             MainWindow.answerTwo.Text = results.Min().ToString();
         }
     }

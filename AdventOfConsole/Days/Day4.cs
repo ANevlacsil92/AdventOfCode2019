@@ -36,10 +36,8 @@ namespace AdventOfConsole.Days
             foreach(string s in numbers)
             {
                 bool hasDouble = false;
-                for(int i = 1; i<=9; i++)
-                {
-                    if (s.Contains(i.ToString() + i.ToString()) && !(s.Contains(i.ToString() + i.ToString() + i.ToString()))) hasDouble = true;
-                }
+                for(int i = 1; i<=9; i++) if (s.Contains(i.ToString() + i.ToString()) && !(s.Contains(i.ToString() + i.ToString() + i.ToString()))) hasDouble = true;
+                
                 if (hasDouble) counter++;
             }
             MainWindow.answerTwo.Text = counter.ToString();
