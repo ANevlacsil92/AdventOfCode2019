@@ -12,79 +12,100 @@ namespace AdventOfConsole.Days
         {
             int[] numbers = MainWindow.input.Text.Split(',').Select(Int32.Parse).ToArray();
             int lastParamLength = 4;
-            int optcode;
             int inVal = 1;
+
             for(int i = 0 ; i < numbers.Length ; i+=lastParamLength)
             {
                 if (numbers[i] % 100 == 1)
                 {
-
-                    Debug.WriteLine(numbers[i]);
-                    Debug.WriteLine((numbers[i]/ 100) % 10 + ((numbers[i] / 100)%10 == 0 ? "address" : "value"));
-                    Debug.WriteLine((numbers[i]/ 1000) % 10 + ((numbers[i] / 1000) % 10 == 0 ? "address" : "value"));
-                    Debug.WriteLine((numbers[i]/ 10000) % 10 + ((numbers[i] / 10000) % 10 == 0 ? "address" : "value"));
-                    Debug.WriteLine("numbers[" + ((numbers[i] / 10000)%10 == 0 ? numbers[i + 3] : i + 3) + "] = numbers[" + ((numbers[i] / 100) % 10 == 0 ? numbers[i + 1] : i + 1) + "] + numbers[" + ((numbers[i] / 1000) % 10 == 0 ? numbers[i + 2] : i + 2) + "];");
-                    numbers[((numbers[i] / 10000) % 10 == 0 ? numbers[i + 3] : i+3)] = numbers[((numbers[i] / 100) % 10 == 0 ? numbers[i + 1] : i + 1)] + numbers[((numbers[i] / 1000) % 10 == 0 ? numbers[i + 2] : i + 2)];
+                    numbers[(numbers[i] % 100000 / 10000 == 0 ? numbers[i + 3] : i + 3)] = numbers[(numbers[i] % 1000 / 100 == 0 ? numbers[i + 1] : i + 1)] + numbers[(numbers[i] % 10000 / 1000 == 0 ? numbers[i + 2] : i + 2)];
                     lastParamLength = 4;
                 }
                 else if (numbers[i] % 100 == 2)
                 {
-                    Debug.WriteLine(numbers[i]);
-                    Debug.WriteLine(numbers[i] / 100 + (numbers[i] / 100 == 0 ? "address" : "value"));
-                    Debug.WriteLine(numbers[i] / 1000 + (numbers[i] / 1000 == 0 ? "address" : "value"));
-                    Debug.WriteLine(numbers[i] / 10000 + (numbers[i] / 10000 == 0 ? "address" : "value"));
-                    Debug.WriteLine("numbers[" + ((numbers[i] / 10000 == 0 ? numbers[i + 3] : i + 3)%10) + "] = numbers[" + (numbers[i] / 100 == 0 ? numbers[i + 1] : i + 1) + "] * numbers[" + (numbers[i] / 1000 == 0 ? numbers[i + 2] : i + 2) + "];");
-                    numbers[((numbers[i] / 10000) % 10 == 0 ? numbers[i + 3] : i + 3)] = numbers[((numbers[i] / 100) % 10 == 0 ? numbers[i + 1] : i + 1)] * numbers[((numbers[i] / 1000) % 10 == 0 ? numbers[i + 2] : i + 2)];
+                    numbers[(numbers[i] % 100000 / 10000 == 0 ? numbers[i + 3] : i + 3)] = numbers[(numbers[i] % 1000 / 100 == 0 ? numbers[i + 1] : i + 1)] * numbers[(numbers[i] % 10000 / 1000 == 0 ? numbers[i + 2] : i + 2)];
                     lastParamLength = 4;
                 }
                 else if (numbers[i] % 100 == 3)
                 {
-                    numbers[((numbers[i] / 100) % 10 == 0 ? numbers[i + 1] : i + 1)] = inVal;
+                    numbers[(numbers[i] % 1000 / 100 == 0 ? numbers[i + 1] : i + 1)] = inVal;
                     lastParamLength = 2;
                 }
                 else if (numbers[i] % 100 == 4)
                 {
-                    MainWindow.answerOne.Text =  (numbers[((numbers[i] / 100) % 10 == 0 ? numbers[i + 1] : i + 1)]).ToString();
+                    MainWindow.answerOne.Text += (numbers[(numbers[i] % 1000 / 100 == 0 ? numbers[i + 1] : i + 1)]).ToString();
                     lastParamLength = 2;
                 }
                 else if (numbers[i] == 99) { 
                     break;
                 }
             }
+
+            MainWindow.answerOne.Text += numbers[0].ToString();
         }
 
         internal static void christmassySolvePuzzleTwo()
         {
-            int[] numbers;
-            int noun = 0,verb = 0;
-            const int result = 19690720;
+            int[] numbers = MainWindow.input.Text.Split(',').Select(Int32.Parse).ToArray();
+            int lastParamLength = 4;
+            int inVal = 5;
 
-            for (noun = 0; noun <= 99; noun++)
+            for (int i = 0; i < numbers.Length; i += lastParamLength)
             {
-                for (verb = 0; verb <= 99; verb++)
+                if (numbers[i] % 100 == 1)
                 {
-                    numbers = MainWindow.input.Text.Split(',').Select(Int32.Parse).ToArray();
-                    numbers[1] = noun;
-                    numbers[2] = verb;
-
-                    for (int i = 0; i < numbers.Length; i += 4)
+                    numbers[(numbers[i] % 100000 / 10000 == 0 ? numbers[i + 3] : i + 3)] = numbers[(numbers[i] % 1000 / 100 == 0 ? numbers[i + 1] : i + 1)] + numbers[(numbers[i] % 10000 / 1000 == 0 ? numbers[i + 2] : i + 2)];
+                    lastParamLength = 4;
+                }
+                else if (numbers[i] % 100 == 2)
+                {
+                    numbers[(numbers[i] % 100000 / 10000 == 0 ? numbers[i + 3] : i + 3)] = numbers[(numbers[i] % 1000 / 100 == 0 ? numbers[i + 1] : i + 1)] * numbers[(numbers[i] % 10000 / 1000 == 0 ? numbers[i + 2] : i + 2)];
+                    lastParamLength = 4;
+                }
+                else if (numbers[i] % 100 == 3)
+                {
+                    numbers[(numbers[i] % 1000 / 100 == 0 ? numbers[i + 1] : i + 1)] = inVal;
+                    lastParamLength = 2;
+                }
+                else if (numbers[i] % 100 == 4)
+                {
+                    MainWindow.answerTwo.Text = (numbers[(numbers[i] % 1000 / 100 == 0 ? numbers[i + 1] : i + 1)]).ToString();
+                    lastParamLength = 2;
+                }
+                else if (numbers[i] % 100 == 5)
+                {
+                    if (numbers[(numbers[i] % 1000 / 100 == 0 ? numbers[i + 1] : i + 1)] != 0)
                     {
-                        try {
-                            if (numbers[i] == 1) numbers[numbers[i + 3]] = numbers[numbers[i + 1]] + numbers[numbers[i + 2]];
-                            else if (numbers[i] == 2) numbers[numbers[i + 3]] = numbers[numbers[i + 1]] * numbers[numbers[i + 2]];
-                            else if (numbers[i] == 99) break;
-                        } catch {
-                            break;
-                        }
+                        i = numbers[(numbers[i] % 10000 / 1000 == 0 ? numbers[i + 2] : i + 2)];
+                        lastParamLength = 0;
                     }
-
-                    if (numbers[0] == result)
+                    else lastParamLength = 3;
+                }
+                else if (numbers[i] % 100 == 6)
+                {
+                    if (numbers[(numbers[i] % 1000 / 100 == 0 ? numbers[i + 1] : i + 1)] == 0)
                     {
-                        MainWindow.answerTwo.Text = (100 * noun + verb).ToString();
-                        return;
+                        i = numbers[(numbers[i] % 10000 / 1000 == 0 ? numbers[i + 2] : i + 2)];
+                        lastParamLength = 0;
                     }
+                    else lastParamLength = 3;
+                }
+                else if (numbers[i] % 100 == 7)
+                {
+                    numbers[(numbers[i] % 100000 / 10000 == 0 ? numbers[i + 3] : i + 3)] = (numbers[(numbers[i] % 1000 / 100 == 0 ? numbers[i + 1] : i + 1)] < numbers[(numbers[i] % 10000 / 1000 == 0 ? numbers[i + 2] : i + 2)] ? 1 : 0);
+                    lastParamLength = 4;
+                }
+                else if (numbers[i] % 100 == 8)
+                {
+                    numbers[(numbers[i] % 100000 / 10000 == 0 ? numbers[i + 3] : i + 3)] = (numbers[(numbers[i] % 1000 / 100 == 0 ? numbers[i + 1] : i + 1)] == numbers[(numbers[i] % 10000 / 1000 == 0 ? numbers[i + 2] : i + 2)] ? 1 : 0);
+                    lastParamLength = 4;
+                }
+                else if (numbers[i] == 99)
+                {
+                    break;
                 }
             }
+
         }
     }
 }

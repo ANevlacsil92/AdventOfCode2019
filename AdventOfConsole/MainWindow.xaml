@@ -26,7 +26,6 @@
         <TextBlock Grid.Row="0" Grid.ColumnSpan="5" HorizontalAlignment="Center" Text="★ Advent Of Console ★" VerticalAlignment="Center" FontSize="50" Margin="10" />
         
         <TextBox x:FieldModifier="public" x:Name="tbInput" Grid.Row="1" Grid.ColumnSpan="6" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" TextWrapping="Wrap" AcceptsReturn="True" Margin="10" Background="#8FB14E" Foreground="#F9F355"/>
-        <TextBox x:FieldModifier="public" x:Name="tbLog" Grid.Row="1" Grid.Column="6" Grid.ColumnSpan="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" TextWrapping="Wrap" AcceptsReturn="True" Margin="10" Background="#8FB14E" Foreground="#F9F355"/>
         
         <Button x:Name="btnStart" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="10" Content="★★★→" Click="btnStart_Click" Background="#8FB14E" Foreground="#F9F355" />
         <TextBlock Grid.Row="2" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="10" Text="★"/>

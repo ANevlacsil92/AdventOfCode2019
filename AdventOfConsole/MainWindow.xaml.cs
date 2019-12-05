@@ -23,7 +23,6 @@ namespace AdventOfConsole
     public partial class MainWindow : Window
     {
         public static TextBox input;
-        public static TextBox log;
         public static TextBox answerOne;
         public static TextBox answerTwo;
 
@@ -31,7 +30,6 @@ namespace AdventOfConsole
         {
             InitializeComponent();
             input = tbInput;
-            log = tbLog;
             answerOne = tbAnswerOne;
             answerTwo = tbAnswerTwo;
         }
