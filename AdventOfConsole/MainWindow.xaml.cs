@@ -41,10 +41,10 @@ namespace AdventOfConsole
             Stopwatch sw = Stopwatch.StartNew();
             TimeSpan offset;
                                      
-            Day3.christmassySolvePuzzleOne();
+            Day5.christmassySolvePuzzleOne();
             offset = sw.Elapsed;
 
-            Day3.christmassySolvePuzzleTwo();
+            Day5.christmassySolvePuzzleTwo();
             sw.Stop();
 
             tbAnswerElapsedOne.Text = offset.ToString(@"mm\:ss\:fff");
